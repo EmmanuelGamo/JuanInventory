@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JuanInventory.MainPage"
+             BackgroundColor="#d7dee4"
+             >
+
+    <StackLayout Margin="20" VerticalOptions="CenterAndExpand" Spacing="20" Orientation="Vertical">
+        <Image Source="Applogo.png" VerticalOptions="Start" HorizontalOptions="Center" HeightRequest="300" WidthRequest="300"></Image>
+        <Entry Placeholder="Email address" PlaceholderColor="Black" x:Name="Email"></Entry>
+        <Entry Placeholder="Password" PlaceholderColor="Black" x:Name = "Password" IsPassword="True"></Entry>
+        <Button x:Name= "loginbtn" BackgroundColor="#6B7A99" Clicked="LoginButton_Clicked" TextColor="Black" Text="Login">
+
+        </Button>
+        <Button BackgroundColor="#D7ECEF" Clicked="SignUpButton_Clicked" TextColor="Black" Text="Sign Up" >
+
+        </Button>
+
+    </StackLayout>
+
+</ContentPage>
