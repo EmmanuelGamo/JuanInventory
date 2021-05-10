@@ -28,7 +28,8 @@ namespace JuanInventory
             {
                 MainPage = new NavigationPage(new MainPage())
                 {
-                   
+                    BarBackgroundColor = Color.FromHex("#6B7A99"),
+                    BarTextColor = Color.Black,
 
                 };
 

@@ -10,7 +10,7 @@
     <ContentPage.Content>
         <StackLayout Margin="20" VerticalOptions="CenterAndExpand" Spacing="20" Orientation="Vertical">
             <Image Source="Profilepic.png" HorizontalOptions="Center" HeightRequest="200" WidthRequest="200"></Image>
-            <Label x:Name="UserEmail" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+            <Label x:Name="UserEmail" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="20"></Label>
             <Button x:Name="BACKUP" Text="BACKUP" CornerRadius ="40" WidthRequest="500" VerticalOptions="CenterAndExpand" BackgroundColor="#aed2ea" ></Button>
             <Button x:Name="RESTORE" Text="RESTORE" CornerRadius ="40" WidthRequest="500" VerticalOptions="CenterAndExpand" BackgroundColor="#6b9eca"></Button>
             <Button x:Name="LOGOUT" Text="LOGOUT" CornerRadius ="40" WidthRequest="500" VerticalOptions="CenterAndExpand" Clicked="LOGOUT_Clicked" BackgroundColor="#3f85c2"></Button>

@@ -22,7 +22,7 @@ namespace JuanInventory
         {
            
             InitializeComponent();
-        
+            
         }
        
         async private void SignUpButton_Clicked(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace JuanInventory
                 var serializedcontent = JsonConvert.SerializeObject(content);
                 Preferences.Set("MyFirebaseRefreshToken", serializedcontent);
                 await Navigation.PushAsync(new Views.Dashboard());
-
+               
             }
             catch (Exception)
             {

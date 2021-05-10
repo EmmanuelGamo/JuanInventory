@@ -8,9 +8,9 @@
 
     <ContentPage.Content>
         <StackLayout>
-
+            <Grid>
             <Label Text="Inventory" TextColor="Black" FontSize="Title" Padding= "20"/>
-            <Frame> </Frame>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
    

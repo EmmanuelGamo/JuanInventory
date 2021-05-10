@@ -21,6 +21,7 @@ namespace JuanInventory.Views
         public MainScreen()
         {
             InitializeComponent();
+            
 
             GetProfileInformationAndRefreshToken();
         }

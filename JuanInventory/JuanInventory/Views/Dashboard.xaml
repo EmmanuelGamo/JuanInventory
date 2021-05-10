@@ -5,6 +5,7 @@
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" xmlns:ViewState="clr-namespace:JuanInventory.Views" xmlns:ViewState1="clr-namespace:JuanInventory"
             android:TabbedPage.ToolbarPlacement="Bottom"
             NavigationPage.HasNavigationBar="false" 
+           
             >
     
     <!--Pages can be added as references or inline-->
@@ -14,6 +15,7 @@
 
             <x:Arguments>
                 <ViewState:MainScreen/>
+                
             </x:Arguments>
             
             <NavigationPage.ToolbarItems>

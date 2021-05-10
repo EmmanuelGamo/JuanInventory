@@ -8,11 +8,9 @@
 
 
     <ContentPage.Content>
-    <StackLayout Margin="20" VerticalOptions="CenterAndExpand" Spacing="20" Orientation="Vertical">
-        <ScrollView>
-            <Label Text="History" TextColor="Black" FontSize="Title" Padding= "20"/>
-        </ScrollView>
-        
+        <StackLayout Margin="20">
+            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

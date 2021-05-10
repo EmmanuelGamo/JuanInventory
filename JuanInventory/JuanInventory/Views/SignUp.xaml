@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JuanInventory.Views.SignUp">
     <ContentPage.Content>
-        <StackLayout>
-            <ImageButton Source="Profilepic.png" WidthRequest="120" HeightRequest ="120" CornerRadius="60"  VerticalOptions="Center" HorizontalOptions ="Center" BackgroundColor="Transparent"></ImageButton>
+        <StackLayout Margin="20" Spacing="20">
+            <ImageButton Source="Profilepic.png" WidthRequest="150" HeightRequest ="150" CornerRadius="100"  VerticalOptions="Center" HorizontalOptions ="Center" BackgroundColor="Transparent"></ImageButton>
             <Entry x:Name="Name" Placeholder="Full Name" Text="{Binding Name}"  
                  />
             <Entry x:Name="MobileNo" Placeholder="Mobile Number" Text="{Binding MobileNo}" Keyboard="Telephone"    
@@ -13,7 +13,7 @@
                  />
             <Entry x:Name="Password" Placeholder="Password" Text="{Binding Password}"     
                    IsPassword="True"/>
-            <Entry x:Name="cfmpasswordentery" Placeholder="Re_Enter Password" Text="{Binding ConfirmPassword}"     
+            <Entry x:Name="cfmpasswordentery" Placeholder="Confirm Password" Text="{Binding ConfirmPassword}"     
                    IsPassword="True" />
             
 
