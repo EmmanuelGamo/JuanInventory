@@ -33,6 +33,7 @@ namespace JuanInventory.Views
                 var saveFirebaseauth = JsonConvert.DeserializeObject<FirebaseAuth>(Preferences.Get("MyFirebaseRefreshToken", ""));
                 var RefreshedContent = await authProvider.RefreshAuthAsync(saveFirebaseauth);
                 Preferences.Set("MyFirebaseRefreshToken", JsonConvert.SerializeObject(RefreshedContent));
+                Fullname.Text = saveFirebaseauth.User.DisplayName;
                 UserEmail.Text = saveFirebaseauth.User.Email;
             }
             catch (Exception)

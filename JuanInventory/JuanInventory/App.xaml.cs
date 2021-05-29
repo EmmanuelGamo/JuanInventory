@@ -10,6 +10,8 @@ using Xamarin.Forms.Xaml;
 
 using Newtonsoft.Json;
 using Xamarin.Essentials;
+using JuanInventory.Views;
+
 namespace JuanInventory
 {
     public partial class App : Application
@@ -17,16 +19,16 @@ namespace JuanInventory
         public App()
         {
             InitializeComponent();
-            if (!string.IsNullOrEmpty(Preferences.Get("MyFirebaseToken", "")))       //one time login
+            if (!string.IsNullOrEmpty(Preferences.Get("MyFirebaseRefreshToken", "")))       //one time login
             {
-                MainPage = new NavigationPage(new Views.MainScreen());
+                MainPage = new NavigationPage(new Views.Dashboard());
                 {
                     
                 };
             }
             else
             {
-                MainPage = new NavigationPage(new MainPage())
+                MainPage = new NavigationPage(new SplashPage())
                 {
                     BarBackgroundColor = Color.FromHex("#6B7A99"),
                     BarTextColor = Color.Black,
