@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1020435960567",
+    "firebase_url": "https://juaninventory-1cfae-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "juaninventory-1cfae",
+    "storage_bucket": "juaninventory-1cfae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020435960567:android:6e34c745092440f8cb79f2",
+        "android_client_info": {
+          "package_name": "com.PeaceY.juaninventory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020435960567-v22o96e51sp1u0adaor1dpe58oudadi4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGr7ppPxG6lZK4Ch3lzYj6ULMba0bzps8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020435960567-v22o96e51sp1u0adaor1dpe58oudadi4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
