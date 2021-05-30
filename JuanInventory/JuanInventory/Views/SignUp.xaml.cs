@@ -37,8 +37,9 @@ namespace JuanInventory.Views
             {
 
                 var authProvider = new FirebaseAuthProvider(new FirebaseConfig(WebAPIkey));
-                var auth = await authProvider.CreateUserWithEmailAndPasswordAsync(Email.Text, Password.Text);
+                var auth = await authProvider.CreateUserWithEmailAndPasswordAsync(Email.Text, Password.Text, Name.Text);
                 string gettoken = auth.FirebaseToken;
+                await authProvider.UpdateProfileAsync(auth.FirebaseToken, Name.Text, "");
                 await App.Current.MainPage.DisplayAlert("Alert","Registration Complete!","Ok");
                 await Navigation.PushAsync(new MainPage());
 
