@@ -7,11 +7,15 @@
              >
 
     <ContentPage.Content>
-        <StackLayout>
-            <Grid>
-            <Label Text="Inventory" TextColor="Black" FontSize="Title" Padding= "20"/>
-            </Grid>
-        </StackLayout>
+    <AbsoluteLayout>
+
+
+        <Label Text="Inventory" TextColor="Black" FontSize="Title" Padding= "20"/>
+        <ImageButton Source="addbutton" 
+            BackgroundColor="Transparent"
+            AbsoluteLayout.LayoutFlags="PositionProportional"  
+            AbsoluteLayout.LayoutBounds=".95,.95,80,80" 
+                     Clicked="ImageButton_Clicked"/>
+    </AbsoluteLayout>
     </ContentPage.Content>
-   
 </ContentPage>

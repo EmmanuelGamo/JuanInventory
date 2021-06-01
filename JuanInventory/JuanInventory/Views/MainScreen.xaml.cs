@@ -48,5 +48,10 @@ namespace JuanInventory.Views
             Preferences.Remove("MyFirebaseRefreshToken");
             App.Current.MainPage = new NavigationPage(new MainPage());
         }
+   
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AddItem());
+        }
     }
 }
