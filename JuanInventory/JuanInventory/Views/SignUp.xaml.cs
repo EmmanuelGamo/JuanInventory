@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Firebase.Auth;
-using Newtonsoft.Json;
-using Xamarin.Essentials;
 using Xamarin.Forms.Xaml;
-
-using Firebase.Database;
-using Firebase.Database.Query;
 
 namespace JuanInventory.Views
 {
