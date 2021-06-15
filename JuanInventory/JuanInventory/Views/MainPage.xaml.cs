@@ -37,10 +37,25 @@ namespace JuanInventory
             {
                 var auth = await authProvider.SignInWithEmailAndPasswordAsync(Email.Text, Password.Text);
                 var content = await auth.GetFreshAuthAsync();
+                string gettoken = auth.FirebaseToken;
                 var serializedcontent = JsonConvert.SerializeObject(content);
                 Preferences.Set("MyFirebaseRefreshToken", serializedcontent);
-                await Navigation.PushAsync(new Views.Dashboard());
-               
+                if (content.User.IsEmailVerified == false)
+                {
+                    var action = await App.Current.MainPage.DisplayAlert("Alert", "Your Email is not verified,Do You want to send a verification link again?", "Yes", "No");
+
+                    if (action)
+                    {
+                        await authProvider.SendEmailVerificationAsync(gettoken);
+                        await App.Current.MainPage.DisplayAlert("Alert", "A confirmation email has been sent to" +""+ Email.Text, "OK");
+                    }
+                 
+
+                }
+                else
+                {
+                    await Navigation.PushAsync(new Views.Dashboard());
+                }
             }
             catch (Exception)
             {

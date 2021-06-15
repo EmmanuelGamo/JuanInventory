@@ -36,11 +36,13 @@ namespace JuanInventory.ViewModels
         {
             services = new DBFirebase();
             AddDatas = services.getAddData();
+
             AddItemCommand = new Command(async () => await addDataAsync(ItemName, Category, Date, Notes));
         }
 
         public async Task addDataAsync(string ItemName, string Category, string Date, string Notes)
         {
+            
             await services.AddData(ItemName, Category, Date, Notes);
         }
     }
