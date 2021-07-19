@@ -5,6 +5,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
+using JuanInventory.ViewModels;
+
 namespace JuanInventory.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -15,8 +17,7 @@ namespace JuanInventory.Views
         public MainScreen()
         {
             InitializeComponent();
-            
-
+            BindingContext = new AddItemViewModel();
             GetProfileInformationAndRefreshToken();
         }
 

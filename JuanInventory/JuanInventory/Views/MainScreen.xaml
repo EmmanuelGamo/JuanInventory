@@ -7,15 +7,29 @@
              >
 
     <ContentPage.Content>
-    <AbsoluteLayout>
+        <AbsoluteLayout>
+            <StackLayout>
+                <Label Text="Inventory" TextColor="Black" FontSize="Title" Padding= "20"/>
+                <ListView ItemsSource="{Binding AddDatas}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding ItemName}"/>
+                                    <Label Text="{Binding Date}"/>
+                                    <Label Text="{Binding Category}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <ImageButton Source="addbutton" 
+                BackgroundColor="Transparent"
+                AbsoluteLayout.LayoutFlags="PositionProportional"  
+                AbsoluteLayout.LayoutBounds=".95,.95,80,80" 
+                            Clicked="ImageButton_Clicked"/>
 
-
-        <Label Text="Inventory" TextColor="Black" FontSize="Title" Padding= "20"/>
-        <ImageButton Source="addbutton" 
-            BackgroundColor="Transparent"
-            AbsoluteLayout.LayoutFlags="PositionProportional"  
-            AbsoluteLayout.LayoutBounds=".95,.95,80,80" 
-                     Clicked="ImageButton_Clicked"/>
-    </AbsoluteLayout>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

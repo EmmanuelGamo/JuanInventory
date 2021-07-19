@@ -28,7 +28,7 @@ namespace JuanInventory.Services
         public ObservableCollection<AddData> getAddData()
         {
             var AddDataData = client
-                .Child("AddItems")
+                .Child("Items")
                 .AsObservable<AddData>()
                 .AsObservableCollection();
             
@@ -37,15 +37,8 @@ namespace JuanInventory.Services
 
         public async Task AddData(string ItemName, string Category, string Date, string Notes)
         {
-            var authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyB3yVcNZZKDuA011L-7VkmQyFxwiWf1PF4"));
-            
-            var saveFirebaseauth = JsonConvert.DeserializeObject<FirebaseAuth>(Preferences.Get("MyFirebaseRefreshToken", ""));
-                var RefreshedContent = await authProvider.RefreshAuthAsync(saveFirebaseauth);
-                Preferences.Set("MyFirebaseRefreshToken", JsonConvert.SerializeObject(RefreshedContent));
-
             AddData s = new AddData() { ItemName = ItemName, Category = Category, Date = Date, Notes = Notes };
             await client
-                .Child(saveFirebaseauth.User.DisplayName)
                 .Child("Items")
                 .PostAsync(s);
             await App.Current.MainPage.DisplayAlert("Alert", ItemName + " has been added to your Items.", "OK");
