@@ -21,7 +21,7 @@ namespace JuanInventory
             InitializeComponent();
             if (!string.IsNullOrEmpty(Preferences.Get("MyFirebaseRefreshToken", "")))       //one time login
             {
-                MainPage = new NavigationPage(new Views.Dashboard());
+                MainPage = new NavigationPage(new Dashboard());
                 {
                     
                 };

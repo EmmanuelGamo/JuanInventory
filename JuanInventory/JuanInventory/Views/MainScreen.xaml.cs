@@ -6,6 +6,7 @@ using Xamarin.Forms.Xaml;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 using JuanInventory.ViewModels;
+using JuanInventory.Model;
 
 namespace JuanInventory.Views
 {
@@ -48,6 +49,15 @@ namespace JuanInventory.Views
         {
 
             Navigation.PushModalAsync(new AddItem());
+        }
+
+        public async void ListView_ItemTapped(object sender, ItemTappedEventArgs args)
+        {
+            var addData = args.Item as AddData;
+            if (addData == null) return;
+
+            await Navigation.PushModalAsync(new ItemDetails(addData));
+            lstAddDatas.SelectedItem = null;
         }
     }
 }

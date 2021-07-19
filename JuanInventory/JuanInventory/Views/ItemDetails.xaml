@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JuanInventory.Views.ItemDetails"
+             Title="{Binding ItemName}">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="ItemName" Text="{Binding ItemName}" IsReadOnly="True" />
+            <Entry x:Name="Date" Text="{Binding Date}" />
+            <Entry x:Name="Category" Text="{Binding Category}" />
+            <Entry x:Name="Notes" Text="{Binding Notes}" />
+            <Button Text="Update" Clicked="UpdateButton_Clicked"/>
+            <Button Text="Delete" Clicked="DeleteButton_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
