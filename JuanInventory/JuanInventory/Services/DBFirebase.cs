@@ -70,7 +70,7 @@ namespace JuanInventory.Services
             var toDeleteData = (await client
                 .Child("Items")
                 .OnceAsync<AddData>()).FirstOrDefault
-                (a => a.Object.ItemName == ItemName && a.Object.Category == Category);
+                (a => a.Object.ItemName == ItemName);
             await client.Child("Items").Child(toDeleteData.Key).DeleteAsync();
         }
 
